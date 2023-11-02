@@ -17,11 +17,25 @@ export default function Home() {
   const [input, setInput] = useState("");
   //const [promptHistory, setPromptHistory] = useState([""]);
 
-  function handleSubmit(e: any) {
+  async function handleSubmit(e: any) {
     e.preventDefault();
     promptHistory.push({ id: count, message: input });
     count++;
     setInput("");
+    const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL!;
+    const secret = process.env.NEXT_PUBLIC_AJSBSD_API_KEY!;
+    const furl = url + "/?secret=" + secret;
+    const fsend = { data: input };
+
+    const response = await fetch(furl, {
+      method: "POST",
+      body: JSON.stringify(fsend),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const body = await response.json();
+    console.log(body);
   }
   //function handleInputChange(e: React.FormEvent<HTMLInputElement>) {
   function handleInputChange(e: any) {
