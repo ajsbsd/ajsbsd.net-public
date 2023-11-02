@@ -28,15 +28,19 @@ export default function AMenu() {
         <Link href="/about">About</Link>
       </li>
       <li>
-        <Link href="https://westminsterdeclaration.org/">
-          The Westminster Declaration
-          <Image
-            width="25"
-            height="25"
-            src="/the_westminster_declaration.png"
-            alt="The Westminster Declaration"
-          />
-        </Link>
+        <div className="flex justify-between">
+          <Link href="https://westminsterdeclaration.org/">
+            The Westminster Declaration
+          </Link>
+          <Link href="https://westminsterdeclaration.org/">
+            <Image
+              width="25"
+              height="25"
+              src="/the_westminster_declaration.png"
+              alt="The Westminster Declaration"
+            />
+          </Link>
+        </div>
       </li>
     </ul>
   );

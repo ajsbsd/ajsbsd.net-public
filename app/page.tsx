@@ -35,10 +35,10 @@ export default function Home() {
           ajsbsd.net-public AI Chatbot v0.2
         </div>
         <div className="flex flex-1 bg-gray-100">
-          <div className="basis-1/5 bg-slate-700">
+          <div className="basis-1/5 bg-slate-700 text-slate-400">
             <AMenu />
           </div>
-          <div className="basis-4/5 bg-slate-900">
+          <div className="basis-4/5 bg-slate-900 text-slate-400">
             {isFirstLoad ? <AIFirstLoad /> : ""}
             {promptHistory
               ? promptHistory.map((k) => (
@@ -47,15 +47,17 @@ export default function Home() {
                   </div>
                 ))
               : ""}
-            <form className="text-black" onSubmit={handleSubmit}>
+            <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
               <input
+                className="border-orange-600 border-2 rounded bg-slate-800 hover:text-sky-400"
+                size={100}
                 value={input}
                 onChange={handleInputChange}
                 placeholder="Welcome to AI, ask away!"
               />
               <br />
               <button
-                className="text-white"
+                className="text-slate-400 bg-red-800 border-2 rounded border-slate-500 mt-1 p-1 hover:text-sky-400"
                 onClick={() => toggleIsFirstLoad(false)}
                 color="tomato"
                 type="submit"
