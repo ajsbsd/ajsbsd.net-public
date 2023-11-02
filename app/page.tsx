@@ -49,7 +49,7 @@ export default function Home() {
               : ""}
             <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
               <input
-                className="border-orange-600 border-2 rounded bg-slate-800 hover:text-sky-400"
+                className="border-slate-500 border-2 rounded bg-slate-800 "
                 size={100}
                 value={input}
                 onChange={handleInputChange}
@@ -57,7 +57,7 @@ export default function Home() {
               />
               <br />
               <button
-                className="text-slate-400 bg-red-800 border-2 rounded border-slate-500 mt-1 p-1 hover:text-sky-400"
+                className="text-slate-900 bg-sky-400 border-2 rounded border-slate-500 mt-1 p-1 hover:text-slate-600"
                 onClick={() => toggleIsFirstLoad(false)}
                 color="tomato"
                 type="submit"
