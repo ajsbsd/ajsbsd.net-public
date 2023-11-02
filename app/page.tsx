@@ -3,17 +3,31 @@ import AMenu from "@/components/AMenu";
 import AIFirstLoad from "@/components/AIFirstLoad";
 import { useState } from "react";
 
+type Message = {
+  id: number;
+  message: string;
+};
+
+let promptHistory: Message[] = [];
+//promptHistory[0] = { id: 0, message: "foo" };
+let count = 0;
+
 export default function Home() {
   const [isFirstLoad, toggleIsFirstLoad] = useState(true);
   const [input, setInput] = useState("");
+  //const [promptHistory, setPromptHistory] = useState([""]);
 
   function handleSubmit(e: any) {
     e.preventDefault();
+    promptHistory.push({ id: count, message: input });
+    count++;
+    setInput("");
   }
   //function handleInputChange(e: React.FormEvent<HTMLInputElement>) {
   function handleInputChange(e: any) {
     setInput(e.target.value);
   }
+
   return (
     <main>
       <div className="flex flex-col h-screen">
@@ -26,7 +40,13 @@ export default function Home() {
           </div>
           <div className="basis-4/5 bg-slate-900">
             {isFirstLoad ? <AIFirstLoad /> : ""}
-
+            {promptHistory
+              ? promptHistory.map((k) => (
+                  <div key={k.id}>
+                    {k.id} {k.message}
+                  </div>
+                ))
+              : ""}
             <form className="text-black" onSubmit={handleSubmit}>
               <input
                 value={input}
