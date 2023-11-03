@@ -39,12 +39,18 @@ export default function AIFirstLoad() {
       <br />
       Please find the information about preprocessing, training and full details
       of the DialoGPT in the{" "}
-      <Link href="https://github.com/microsoft/DialoGPT">
+      <Link
+        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        href="https://github.com/microsoft/DialoGPT"
+      >
         original DialoGPT repository
       </Link>
       <br />
       ArXiv paper:{" "}
-      <Link href="https://arxiv.org/abs/1911.00536">
+      <Link
+        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        href="https://arxiv.org/abs/1911.00536"
+      >
         https://arxiv.org/abs/1911.00536
       </Link>
       <br />
