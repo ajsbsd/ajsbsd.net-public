@@ -34,7 +34,21 @@ export default function Home() {
     const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL!;
     const secret = process.env.NEXT_PUBLIC_AJSBSD_API_KEY!;
     const furl = url + "/?secret=" + secret;
-    const fsend = { data: input };
+
+    let tmp: string[] = [];
+    let tmpr: string[] = [];
+    let tmpi: number = 0;
+
+    //promptHistory.map((k) => tmp.push(k.message));
+    //promptHistory.map((k) => tmpr.push(k.response));
+
+    console.log(tmp);
+
+    const fsend = {
+      data: input,
+      past_user_inputs: tmp,
+      past_user_responses: tmpr,
+    };
 
     const response = await fetch(furl, {
       method: "POST",
@@ -54,6 +68,7 @@ export default function Home() {
       },
     ]);
     count++;
+
     setAlertMsg("Your turn to talk!");
   }
   //function handleInputChange(e: React.FormEvent<HTMLInputElement>) {

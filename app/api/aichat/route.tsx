@@ -1,7 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
-  //const { token } = req.body;
   const secret = req.nextUrl.searchParams.get("secret");
 
   if (secret !== process.env.AJSBSD_API_KEY) {
@@ -19,22 +18,11 @@ export async function POST(req: NextRequest) {
   }
 
   const data = await req.json();
-  //console.log(data.data);
-
-  /*
-    {
-        "inputs": {
-            "past_user_inputs": ["Which movie is the best ?"],
-            "generated_responses": ["It's Die Hard for sure."],
-            "text": "Can you explain why ?",
-        },
-    }
-  */
 
   const hf_send = {
     inputs: {
-      past_user_inputs: ["Which movie is the best ?"],
-      generated_responses: ["It is Die Hard for sure."],
+      past_user_inputs: data.past_user_inputs,
+      generated_responses: data.past_user_responses,
       text: data.data,
     },
   };
