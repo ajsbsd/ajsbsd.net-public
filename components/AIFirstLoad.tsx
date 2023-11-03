@@ -4,7 +4,7 @@ import "@/app/globals.css";
 export default function AIFirstLoad() {
   return (
     <div className="text-md">
-      <p className="bg-blue-500 text-xl">
+      <p className="bg-black text-xl">
         👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋
       </p>
       <br />
