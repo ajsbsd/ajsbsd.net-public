@@ -1,30 +1,56 @@
+import Link from "next/link";
+import "@/app/globals.css";
+
 export default function AIFirstLoad() {
   return (
-    <div className="tx-sm">
-      <h3>👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋</h3>
-      I&apos;m here to assist you with a wide range of tasks and provide
-      information on various topics.
+    <div className="text-md">
+      <p className="bg-blue-500 text-xl">
+        👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋
+      </p>
       <br />
-      Whether you have questions, need help, or just want to chat. ⚙️ Here are
-      some things I can do:
+      Currently infering from{" "}
+      <Link
+        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        href="https://huggingface.co/microsoft/DialoGPT-large"
+      >
+        microsoft/DialoGPT-large over at HuggingFace
+      </Link>
       <br />
-      1️⃣ Answer questions and provide information on a variety of topics.
       <br />
-      2️⃣ Help you with language translation.
+      🔥🔥🔥 Nothing is stored or trained, refresh and the chat is gone.
       <br />
-      3️⃣ Provide recommendations for restaurants, movies, and more.
       <br />
-      4️⃣ Perform calculations and conversions.
+      From Model.card:
       <br />
-      💬 Just type your question or request, and I&apos;ll do my best to assist
-      you. Feel free to ask me anything! If you&apos;re not sure where to start,
-      click one of the buttons on the top and click the Speak to AI button.
       <br />
-      🤖 I&apos;m constantly learning and improving, so your feedback is
-      valuable. Let me know how I can make your experience better. Use the
-      Contact ajsbsd.net button to leave feedback.
+      A State-of-the-Art Large-scale Pretrained Response generation model
+      (DialoGPT) DialoGPT is a SOTA large-scale pretrained dialogue response
+      generation model for multiturn conversations.
+      <br />
+      The human evaluation results indicate that the response generated from
+      DialoGPT is comparable to human response quality under a single-turn
+      conversation Turing test. <br />
+      The model is trained on 147M multi-turn dialogue from Reddit discussion
+      thread.
+      <br />
+      <br />
+      Multi-turn generation examples from an interactive environment.
+      <br />
+      <br />
+      Please find the information about preprocessing, training and full details
+      of the DialoGPT in the{" "}
+      <Link href="https://github.com/microsoft/DialoGPT">
+        original DialoGPT repository
+      </Link>
+      <br />
+      ArXiv paper:{" "}
+      <Link href="https://arxiv.org/abs/1911.00536">
+        https://arxiv.org/abs/1911.00536
+      </Link>
+      <br />
       <br />
       🌟 Ready to get started? Type your first message, and let&apos;s chat!
+      <br />
       <br />
     </div>
   );
