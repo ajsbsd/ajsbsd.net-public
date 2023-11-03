@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ajsbsd.net AI Chatbot v2",
-  description: "ajsbsd.net AI Chatbot v2",
+  description: "Home page of Aaron S. the Upwork Consultant and AI Enthusiast",
 };
 
 export default function RootLayout({

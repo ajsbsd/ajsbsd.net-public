@@ -7,8 +7,10 @@ export default function AIFirstLoad() {
       <p className="bg-black text-xl">
         👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋
       </p>
-      <br />
-      Currently infering from{" "}
+      <video className="float-left pr-2" width="480" height="360" controls>
+        <source src="/ajsbsd.net-cyborg_reporter.mp4" type="video/mp4" />
+      </video>
+      Currently inferring from{" "}
       <Link
         className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
         href="https://huggingface.co/microsoft/DialoGPT-large"
@@ -56,7 +58,6 @@ export default function AIFirstLoad() {
       <br />
       <br />
       🌟 Ready to get started? Type your first message, and let&apos;s chat!
-      <br />
       <br />
     </div>
   );

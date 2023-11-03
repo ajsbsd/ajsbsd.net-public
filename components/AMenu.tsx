@@ -5,10 +5,7 @@ export default function AMenu() {
   return (
     <ul>
       <li>
-        <Link href="/">AI Chat</Link>
-      </li>
-      <li>
-        <Link href="/aiassistant">🌟AI Assistants🌟</Link>
+        <Link href="/">🌟AI Chat 🌟</Link>
       </li>
       <li>
         <Link href="/debian">Debian</Link>
@@ -21,7 +18,7 @@ export default function AMenu() {
       </li>
       <li>
         <Link href="https://www.upwork.com/freelancers/~01ae72fcdf0267bdbe">
-          Resume
+          Upwork Resume
         </Link>
       </li>
       <li>

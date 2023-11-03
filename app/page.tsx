@@ -2,6 +2,7 @@
 import AMenu from "@/components/AMenu";
 import AIFirstLoad from "@/components/AIFirstLoad";
 import { useState } from "react";
+import Image from "next/image";
 
 type Message = {
   id: number;
@@ -21,7 +22,9 @@ export default function Home() {
   //  { id: 0, message: "Start", response: "None yet" },
   //]);
   const [promptHistory, setPromptHistory] = useState<Message[]>([]);
-  const [AlertMsg, setAlertMsg] = useState("");
+  const [AlertMsg, setAlertMsg] = useState(
+    "Please type at least 10 characters..."
+  );
 
   //const [promptHistory, setPromptHistory] = useState([""]);
 
@@ -99,12 +102,22 @@ export default function Home() {
             {isFirstLoad ? <AIFirstLoad /> : ""}
             {promptHistory?.map((k) => (
               <div key={k.id}>
-                <p className="text-red-500">
+                <p className="text-red-500  text-center">
                   Me: {k.id} {k.message}
                 </p>
-                <p className="text-blue-500">AI: {k.response}</p>
+                <p className="text-blue-500">
+                  <Image
+                    className="float-left"
+                    src="/ajsbsd.net-cyborg_reporter.png"
+                    width="40"
+                    height="40"
+                    alt="Evelyn the cyborg reporter"
+                  />
+                  {k.response}
+                </p>
               </div>
             ))}
+            <br />
             <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
               <input
                 className="border-slate-500 border-2 rounded bg-slate-800 "
