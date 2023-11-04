@@ -18,5 +18,5 @@ Experiment with HF Inference since my Server won't run OpenLLM/BentoML very well
 
 ## 11.04.2023 - Work on how it looks, DialoGPT working
 
-Installed <a href=https://www.ripple-ui.com/">RippleUI</a>
+Installed <a href="https://www.ripple-ui.com/">RippleUI</a>
 Got some CSS help from <a href="https://tailblocks.cc/">tailblocks.cc</a>
