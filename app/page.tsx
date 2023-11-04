@@ -113,9 +113,7 @@ export default function Home() {
 
             {promptHistory?.map((k) => (
               <div key={k.id}>
-                <p className="text-red-500  text-center">
-                  Me: {k.id} {k.message}
-                </p>
+                <p className="text-red-500  text-center">{k.message}</p>
 
                 <p className="text-blue-500">{k.response}</p>
               </div>
