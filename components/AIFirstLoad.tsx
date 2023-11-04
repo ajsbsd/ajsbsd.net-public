@@ -7,7 +7,7 @@ export default function AIFirstLoad() {
       <p className="bg-black text-xl">
         👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋
       </p>
-      <video className="float-left pr-2" width="480" height="360" controls>
+      <video className="float-right pr-2" width="400" height="300" controls>
         <source src="/ajsbsd.net-cyborg_reporter.mp4" type="video/mp4" />
       </video>
       Currently inferring from{" "}

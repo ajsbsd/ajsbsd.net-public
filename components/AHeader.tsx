@@ -1,7 +1,7 @@
 export default function AHeader() {
   return (
     <header className="body-font text-gray-600">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="container bg-stone-950 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center mb-4 md:mb-0">
           <span className="ml-3 text-xl text-blue-900">ajsbsd.net</span>
         </a>

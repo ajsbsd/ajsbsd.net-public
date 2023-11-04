@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <main>
       <AHeader />
+      <div className="divider"></div>
       <AIFirstLoad />
+      <div className="divider"></div>
       <AFooter />
     </main>
   );
