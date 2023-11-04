@@ -99,22 +99,25 @@ export default function Home() {
             <AMenu />
           </div>
           <div className="basis-4/5 bg-slate-900 text-slate-400">
-            {isFirstLoad ? <AIFirstLoad /> : ""}
+            {isFirstLoad ? (
+              <AIFirstLoad />
+            ) : (
+              <Image
+                className=""
+                src="/ajsbsd.net-cyborg_reporter.png"
+                width="200"
+                height="200"
+                alt="Evelyn the cyborg reporter"
+              />
+            )}
+
             {promptHistory?.map((k) => (
               <div key={k.id}>
                 <p className="text-red-500  text-center">
                   Me: {k.id} {k.message}
                 </p>
-                <p className="text-blue-500">
-                  <Image
-                    className="float-left"
-                    src="/ajsbsd.net-cyborg_reporter.png"
-                    width="40"
-                    height="40"
-                    alt="Evelyn the cyborg reporter"
-                  />
-                  {k.response}
-                </p>
+
+                <p className="text-blue-500">{k.response}</p>
               </div>
             ))}
             <br />

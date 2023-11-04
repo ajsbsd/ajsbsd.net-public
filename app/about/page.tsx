@@ -13,10 +13,10 @@ export default function DrumAndBass() {
             <AMenu />
           </div>
           <div className="basis-4/5 bg-slate-900 text-slate-400">
-            <video className="float-right" width="480" height="360" controls>
+            <video className="float-right" width="400" height="400" controls>
               <source src="/ajsbsd.net-talking-about.mp4" type="video/mp4" />
             </video>
-            <p className="p-2">
+            <p className="pr-2 pl-2">
               <Link
                 className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 href="https://ajsbsd.net"
