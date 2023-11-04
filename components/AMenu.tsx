@@ -5,7 +5,10 @@ export default function AMenu() {
   return (
     <ul>
       <li>
-        <Link href="/">🌟AI Chat 🌟</Link>
+        <Link href="/">Home</Link>
+      </li>
+      <li>
+        <Link href="/dialogpt">🌟DialoGPT AI Chat 🌟</Link>
       </li>
       <li>
         <Link href="/debian">Debian</Link>

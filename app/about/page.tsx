@@ -1,7 +1,7 @@
 import AMenu from "@/components/AMenu";
 import Link from "next/link";
 
-export default function DrumAndBass() {
+export default function About() {
   return (
     <div>
       <div className="flex flex-col h-screen">
