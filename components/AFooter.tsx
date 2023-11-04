@@ -7,13 +7,13 @@ export default function AFooter() {
             <span className="ml-3 text-xl">ajsbsd.net</span>
           </a>
           <p className="mt-2 text-sm text-gray-600">
-            Air plant banjo lyft occupy retro adaptogen indego
+            Aaron&apos;s BSD, Linux and AI portal
           </p>
         </div>
         <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="text-blue-900 title-font font-medium  tracking-widest text-sm mb-3">
-              CATEGORIES
+              About
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -32,7 +32,7 @@ export default function AFooter() {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="text-blue-900 title-font font-medium  tracking-widest text-sm mb-3">
-              CATEGORIES
+              Debian
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -51,7 +51,7 @@ export default function AFooter() {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="text-blue-900 title-font font-medium  tracking-widest text-sm mb-3">
-              CATEGORIES
+              Drum & Bass
             </h2>
             <nav className="list-none mb-10">
               <li>
@@ -70,7 +70,7 @@ export default function AFooter() {
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="text-blue-900 title-font font-medium  tracking-widest text-sm mb-3">
-              CATEGORIES
+              OpenBSD
             </h2>
             <nav className="list-none mb-10">
               <li>
