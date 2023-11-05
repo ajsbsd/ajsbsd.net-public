@@ -20,16 +20,36 @@ export default function AFooter() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-blue-800">First Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.upwork.com/freelancers/~01ae72fcdf0267bdbe"
+                >
+                  Resume
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Second Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://github.com/ajsbsd/ajsbsd.net-public"
+                >
+                  Github
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Third Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.deviantart.com/ajsbsd"
+                >
+                  Deviant Art
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Fourth Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://westminsterdeclaration.org/"
+                >
+                  The Westminster Declaration
+                </a>
               </li>
             </nav>
           </div>
@@ -39,16 +59,36 @@ export default function AFooter() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-blue-800">First Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.debian.org"
+                >
+                  Debian.org
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Second Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.debian.org/intro/why_debian"
+                >
+                  Reasons
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Third Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://planet.debian.org/"
+                >
+                  Planet
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Fourth Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://distrowatch.com/table.php?distribution=debian"
+                >
+                  Distrowatch
+                </a>
               </li>
             </nav>
           </div>
@@ -58,16 +98,36 @@ export default function AFooter() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-blue-800">First Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://jungletrain.net/"
+                >
+                  JungleTrain.net
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Second Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.hospitalrecords.com/artist/s-p-y"
+                >
+                  NHS S.P.Y
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Third Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://amaruk.bandcamp.com/"
+                >
+                  AMIT
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Fourth Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://odysee.com/@ajsbsd:b/s.p.y-by_your_side:b?lid=76f37725279a078756bc263713b69cd8feea6062"
+                >
+                  Odysee Uploads
+                </a>
               </li>
             </nav>
           </div>
@@ -77,16 +137,36 @@ export default function AFooter() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a className="text-gray-600 hover:text-blue-800">First Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.openbsd.org"
+                >
+                  OpenBSD.org
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Second Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.openbsdhandbook.com/"
+                >
+                  Handbook
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Third Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://news.ycombinator.com/item?id=38039689"
+                >
+                  YC Syscal(2)
+                </a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-blue-800">Fourth Link</a>
+                <a
+                  className="text-gray-600 hover:text-blue-800"
+                  href="https://www.provos.org/p/hackathon/"
+                >
+                  Hackathons
+                </a>
               </li>
             </nav>
           </div>
