@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function AHeader() {
   return (
     <header className="body-font text-gray-600">
-      <div className="container bg-stone-950 mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <div className="bg-slate-950 flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           href="/"
           className="flex title-font font-medium items-center mb-4 md:mb-0"
