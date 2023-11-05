@@ -3,7 +3,10 @@ export default function AFooter() {
     <footer className=" body-font">
       <div className="container bg-stone-950 px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-          <a className="flex title-font font-medium items-center md:justify-start justify-center text-blue-900">
+          <a
+            href="/"
+            className="flex title-font font-medium items-center md:justify-start justify-center text-blue-900"
+          >
             <span className="ml-3 text-xl">ajsbsd.net</span>
           </a>
           <p className="mt-2 text-sm text-gray-600">
@@ -92,7 +95,7 @@ export default function AFooter() {
       <div className="bg-indigo-950">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-blue-800 text-xs">
-            Copyright © 2009 - 2023 ajsbsd.net
+            Copyright © 2004 - 2023 ajsbsd.net
           </p>
         </div>
       </div>

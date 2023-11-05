@@ -3,13 +3,7 @@ import "@/app/globals.css";
 
 export default function AIFirstLoad() {
   return (
-    <div className="text-md">
-      <p className="bg-black text-xl">
-        👋👋👋Welcome to ajsbsd.net&apos;s AI Chatbot!👋👋👋
-      </p>
-      <video className="float-right pr-2" width="400" height="300" controls>
-        <source src="/ajsbsd.net-cyborg_reporter.mp4" type="video/mp4" />
-      </video>
+    <div className="text-md text-gray-400">
       Currently inferring from{" "}
       <Link
         className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -19,15 +13,20 @@ export default function AIFirstLoad() {
       </Link>
       <br />
       <br />
-      🔥🔥🔥 Nothing is stored or trained, refresh and the chat is gone.
+      🔥Nothing is stored or trained, refresh and the chat is gone.🔥
       <br />
       <br />
-      From Model.card:
+      <Link
+        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        href="https://huggingface.co/microsoft/DialoGPT-large"
+      >
+        From Model.card:
+      </Link>
       <br />
       <br />
       A State-of-the-Art Large-scale Pretrained Response generation model
-      (DialoGPT) DialoGPT is a SOTA large-scale pretrained dialogue response
-      generation model for multiturn conversations.
+      DialoGPT is a SOTA large-scale pretrained dialogue response generation
+      model for multiturn conversations.
       <br />
       The human evaluation results indicate that the response generated from
       DialoGPT is comparable to human response quality under a single-turn
