@@ -10,7 +10,7 @@ export default function Welcome() {
             <p className="hidden lg:inline-block">AI Chat</p>
           </h1>
           <p className="mb-8 leading-relaxed text-gray-400">
-            Experiment with AI Chat Secuerly and Anonymously via HuggingFace
+            Experiment with AI Chat Securely and Anonymously via HuggingFace
             inference.
             <br />
             No login, no logging, nothing stored locally, nothing added to NLM
