@@ -14,6 +14,8 @@ Experiment with HF Inference since my Server won't run OpenLLM/BentoML very well
 
 ## Notes
 
+Container class in either TW or Ripple was maxing at 1024px, changed header and footer's from container to div.
+
 ## ChangeLog
 
 ## 11.04.2023 - Work on how it looks, DialoGPT working

@@ -5,12 +5,13 @@ export default function Welcome() {
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-200">
-            Privact First
+            Privacy First
             <br />
             <p className="hidden lg:inline-block">AI Chat</p>
           </h1>
           <p className="mb-8 leading-relaxed text-gray-400">
-            All done via HuggingFace inference.
+            Experiment with AI Chat Secuerly and Anonymously via HuggingFace
+            inference.
             <br />
             No login, no logging, nothing stored locally, nothing added to NLM
             models.
