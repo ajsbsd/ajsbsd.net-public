@@ -30,7 +30,7 @@ export default function Welcome() {
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <video className="float-right pr-2" width="720" height="600" controls>
-            <source src="/ajsbsd.net-cyborg_reporter.mp4" type="video/mp4" />
+            <source src="/ajsbsd.net-introduction.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
