@@ -1,8 +1,8 @@
 "use client";
 import AHeader from "@/components/AHeader";
 import AFooter from "@/components/AFooter";
-
-import AIFirstLoad from "@/components/AIFirstLoad";
+// change intro per model
+import AIFirstLoad from "@/components/Blenderbot";
 import { useState } from "react";
 
 type Message = {
@@ -13,7 +13,9 @@ type Message = {
 
 let count = 0;
 
-export default function DialoGPT() {
+const MODEL_PERSONA = "BlenderBot Becky";
+
+export default function BlenderBot() {
   const [isFirstLoad, toggleIsFirstLoad] = useState(true);
   const [input, setInput] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -25,18 +27,23 @@ export default function DialoGPT() {
     e.preventDefault();
     setInput("");
     setBtnDisabled(true);
-    setAlertMsg("Communicating with Carina, our AI");
+    setAlertMsg(`Communicating with ${MODEL_PERSONA}, our AI`);
 
-    const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL!;
+    // add to .env.local, make new api route
+    const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL_BLENDERBOT!;
     const secret = process.env.NEXT_PUBLIC_AJSBSD_API_KEY!;
     const furl = url + "/?secret=" + secret;
 
     // Dialogpt did not seem to like this...
     let tmp: string[] = [];
+    promptHistory.forEach((p) => {
+      tmp.push(p.message);
+    });
     let tmpr: string[] = [];
+    promptHistory.forEach((r) => {
+      tmpr.push(r.response);
+    });
     //let tmpi: number = 0;
-
-    console.log(tmp);
 
     const fsend = {
       data: input,
@@ -84,7 +91,7 @@ export default function DialoGPT() {
         <AIFirstLoad />
       ) : (
         <p className="text-blue-500">
-          💬 Hello, I am Carina. <br />
+          💬 Hello, I am {MODEL_PERSONA}. <br />
         </p>
       )}
 

@@ -15,17 +15,21 @@ export default function Welcome() {
             <br />
             No login, no logging, nothing stored locally, nothing added to NLM
             models.
+            <br />
+            <br />
+            Choose a model from to get started
           </p>
           <div className="flex justify-center">
             <Link href="/dialogpt">
               <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Chat now
+                Carina
               </button>
             </Link>
-
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Learn More
-            </button>
+            <Link href="/blenderbot">
+              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                Becky
+              </button>
+            </Link>
           </div>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
