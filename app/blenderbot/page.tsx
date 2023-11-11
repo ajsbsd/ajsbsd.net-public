@@ -84,7 +84,7 @@ export default function BlenderBot() {
   }
 
   return (
-    <main>
+    <div>
       <AHeader />
 
       {isFirstLoad ? (
@@ -123,7 +123,8 @@ export default function BlenderBot() {
         </button>
         <p className="text-lg">{AlertMsg}</p>
       </form>
+
       <AFooter />
-    </main>
+    </div>
   );
 }

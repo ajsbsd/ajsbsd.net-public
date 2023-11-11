@@ -77,46 +77,48 @@ export default function DialoGPT() {
   }
 
   return (
-    <main>
+    <div>
       <AHeader />
+      <div className="flex-col flex-h">
+        {isFirstLoad ? (
+          <AIFirstLoad />
+        ) : (
+          <p className="text-blue-500">
+            💬 Hello, I am Carina. <br />
+          </p>
+        )}
 
-      {isFirstLoad ? (
-        <AIFirstLoad />
-      ) : (
-        <p className="text-blue-500">
-          💬 Hello, I am Carina. <br />
-        </p>
-      )}
-
-      {promptHistory?.map((k) => (
-        <div key={k.id}>
-          <p className="text-gray-600">{k.message}</p>
-          <br />
-          <p className="text-blue-500">💬 {k.response}</p>
-        </div>
-      ))}
-      <br />
-      <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
-        <input
-          className="border-slate-500 border-2 rounded bg-slate-800 "
-          size={100}
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Welcome to AI, ask away!"
-        />
+        {promptHistory?.map((k) => (
+          <div key={k.id}>
+            <p className="text-gray-600">{k.message}</p>
+            <br />
+            <p className="text-blue-500">💬 {k.response}</p>
+          </div>
+        ))}
         <br />
-        <button
-          className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-          onClick={handleButton}
-          color="tomato"
-          type="submit"
-          disabled={btnDisabled}
-        >
-          Speak to AI
-        </button>
-        <p className="text-lg">{AlertMsg}</p>
-      </form>
+        <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
+          <input
+            className="border-slate-500 border-2 rounded bg-slate-800 "
+            size={100}
+            value={input}
+            onChange={handleInputChange}
+            placeholder="Welcome to AI, ask away!"
+          />
+          <br />
+          <button
+            className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            onClick={handleButton}
+            color="tomato"
+            type="submit"
+            disabled={btnDisabled}
+          >
+            Speak to AI
+          </button>
+          <p className="text-lg">{AlertMsg}</p>
+        </form>
+      </div>
+
       <AFooter />
-    </main>
+    </div>
   );
 }

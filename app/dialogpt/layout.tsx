@@ -10,5 +10,5 @@ export default function DialoGPT({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <div>{children}</div>;
 }

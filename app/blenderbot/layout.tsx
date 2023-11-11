@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "ajsbsd.net - DialoGPT",
-  description: "ajsbsd.net - DialoGPT - AI Chatbot",
+  description: "ajsbsd.net - Blenderbot - AI Chatbot",
 };
 
 export default function Blenderbot({
@@ -10,5 +10,5 @@ export default function Blenderbot({
 }: {
   children: React.ReactNode;
 }) {
-  return <main>{children}</main>;
+  return <div>{children}</div>;
 }

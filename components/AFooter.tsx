@@ -1,6 +1,6 @@
 export default function AFooter() {
   return (
-    <footer className=" body-font">
+    <div className="">
       <div className=" bg-stone-950 px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a
@@ -172,13 +172,10 @@ export default function AFooter() {
           </div>
         </div>
       </div>
-      <div className="bg-indigo-950">
-        <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-          <p className="text-blue-800 text-xs">
-            Copyright © 2004 - 2023 ajsbsd.net
-          </p>
-        </div>
+
+      <div className="bg-indigo-950 text-blue-800 text-xslex-1 p-4">
+        Copyright © 2004 - 2023 ajsbsd.net
       </div>
-    </footer>
+    </div>
   );
 }
