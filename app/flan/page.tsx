@@ -11,6 +11,17 @@ type Message = {
   response: string;
 };
 
+const FLAN_PROMPTS: string[] = [
+  "Translate to German: Large language models are great.",
+  "Please answer to the following question. Who is going to be the next Heisman Trophy winner?",
+  "Q: Can Taylor Swift have a conversation with George Mason? Give the rationale before answering.",
+  "Please answer the following question. What is the boiling point of Amonia?",
+  "Answer the following yes/no question. Can you write a whole Haiku on Threads?",
+  "Q: ( False or not False or False ) is? A: Let's think step by step",
+  "The square root of x is the cube root of y. What is y to the power of 2, if x = 4?",
+  "Premise: At my age you will probably have learnt one lesson. Hypothesis: It's not certain how many lessons you'll learn by your thirties.Does the premise entail the hypothesis?",
+];
+
 let count = 0;
 
 const MODEL_PERSONA = "Flan";
@@ -18,7 +29,6 @@ const MODEL_PERSONA = "Flan";
 export default function Flan() {
   const [isFirstLoad, toggleIsFirstLoad] = useState(true);
   const [input, setInput] = useState("");
-  const [btnDisabled, setBtnDisabled] = useState(true);
 
   const [promptHistory, setPromptHistory] = useState<Message[]>([]);
   const [AlertMsg, setAlertMsg] = useState("");
@@ -26,7 +36,6 @@ export default function Flan() {
   async function handleSubmit(e: any) {
     e.preventDefault();
     setInput("");
-    setBtnDisabled(true);
     setAlertMsg(`Communicating with ${MODEL_PERSONA}, our AI`);
 
     // add to .env.local, make new api route
@@ -75,18 +84,19 @@ export default function Flan() {
   //function handleInputChange(e: React.FormEvent<HTMLInputElement>) {
   function handleInputChange(e: any) {
     setInput(e.target.value);
-    if (e.target.value.length >= 2) {
-      setBtnDisabled(false);
-    }
   }
   function handleButton(e: any) {
     toggleIsFirstLoad(false);
   }
 
+  function handlePromptChange(e: any) {
+    setInput(e.target.outerText);
+    console.log(e.target.outerText);
+  }
+
   return (
     <div>
       <AHeader />
-
       {isFirstLoad ? (
         <FlanT5 />
       ) : (
@@ -94,7 +104,6 @@ export default function Flan() {
           💬 Hello, I am {MODEL_PERSONA}. <br />
         </p>
       )}
-
       {promptHistory?.map((k) => (
         <div key={k.id}>
           <p className="text-gray-600">{k.message}</p>
@@ -117,13 +126,18 @@ export default function Flan() {
           onClick={handleButton}
           color="tomato"
           type="submit"
-          disabled={btnDisabled}
         >
           Speak to AI
         </button>
         <p className="text-lg">{AlertMsg}</p>
       </form>
-
+      <div className="columns-3 text-xs m-2">
+        {FLAN_PROMPTS.map((f) => (
+          <div className="mb-2" key={f} onClick={handlePromptChange}>
+            {f}
+          </div>
+        ))}
+      </div>
       <AFooter />
     </div>
   );

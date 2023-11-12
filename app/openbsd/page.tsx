@@ -13,7 +13,7 @@ export default function OpenBSD() {
           height="360"
           controls
         >
-          <source src="/ajsbsd.net-openbsd.mp4" type="video/mp4" />
+          <source src="/ajsbsd.net-openbsd-nov.mp4" type="video/mp4" />
         </video>
         <Link
           href="https://www.openbsd.org"
@@ -21,10 +21,9 @@ export default function OpenBSD() {
         >
           OpenBSD
         </Link>{" "}
-        is an open-source, multi-platform operating system that is based on the
-        4.4BSD Unix-like operating system. It is known for its strong focus on
-        security, portability, correctness, and integrated cryptography. Here
-        are some key points about{" "}
+        is an open-source, multi-platform operating system that is based on
+        4.4BSD. It is known for its strong focus on security, portability,
+        correctness, and integrated cryptography. Here are some key points about{" "}
         <Link
           href="https://www.openbsd.org"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -42,9 +41,11 @@ export default function OpenBSD() {
         </Link>{" "}
         is well-known for its commitment to proactive security. The
         project&apos;s developers actively work to identify and fix security
-        vulnerabilities, resulting in a strong track record of security. The
-        quote you mentioned, &quot;Only two remote holes in the default install,
-        in a heck of a long time!&quot; is often cited as an example of{" "}
+        vulnerabilities.
+        <br />
+        <br />
+        &quot;Only two remote holes in the default install, in a heck of a long
+        time!&quot; is often cited as an example of{" "}
         <Link
           href="https://www.openbsd.org"
           className="font-medium text-blue-600 dark:text-blue-500 hover:underline"

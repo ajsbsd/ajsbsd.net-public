@@ -24,7 +24,7 @@ export default function AHeader() {
             OpenBSD
           </a>
         </nav>
-        <Link href="/dialogpt">
+        <Link href="/flan">
           <button className="text-blue-900 inline-flex items-center  border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
             AI Chat
           </button>

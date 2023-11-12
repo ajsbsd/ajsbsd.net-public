@@ -21,18 +21,14 @@ export default function Welcome() {
           </p>
           <div className="flex justify-center">
             <Link href="/flan">
-              <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                T5-Flan
+              <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
+                Flan T5
               </button>
             </Link>
-            <Link href="/dialogpt">
-              <button className="ml-4  inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                DialoGPT
-              </button>
-            </Link>
-            <Link href="/blenderbot">
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Blenderbot
+
+            <Link href="mailto:ajsbsd@gmail.com">
+              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded text-lg">
+                Contact
               </button>
             </Link>
           </div>
