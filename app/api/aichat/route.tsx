@@ -37,7 +37,6 @@ export async function POST(req: NextRequest) {
   );
 
   const hf_result = await hf_response.json();
-  console.log(hf_result);
 
   return NextResponse.json({
     text: "Added!",

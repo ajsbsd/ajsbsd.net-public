@@ -1,4 +1,5 @@
-// https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill
+// Backend Flan-t5-small
+
 import { NextResponse, NextRequest } from "next/server";
 
 export async function GET(req: NextRequest) {
@@ -19,7 +20,7 @@ export async function POST(req: NextRequest) {
   }
 
   const data = await req.json();
-
+  /*
   const hf_send = {
     inputs: {
       past_user_inputs: data.past_user_inputs,
@@ -27,9 +28,17 @@ export async function POST(req: NextRequest) {
       text: data.data,
     },
   };
+  */
+
+  const hf_send = {
+    inputs: data.data,
+    parameters: {
+      max_length: 256,
+    },
+  };
 
   const hf_response = await fetch(
-    "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill",
+    "https://api-inference.huggingface.co/models/google/flan-t5-large",
     {
       headers: { Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}` },
       method: "POST",
@@ -43,6 +52,6 @@ export async function POST(req: NextRequest) {
     text: "Added!",
     data: data,
     hf_send: data.data,
-    hf_result: hf_result.generated_text,
+    hf_result: hf_result[0].generated_text,
   });
 }

@@ -20,14 +20,19 @@ export default function Welcome() {
             Choose a model from to get started
           </p>
           <div className="flex justify-center">
+            <Link href="/flan">
+              <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                T5-Flan
+              </button>
+            </Link>
             <Link href="/dialogpt">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-                Carina
+              <button className="ml-4  inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                DialoGPT
               </button>
             </Link>
             <Link href="/blenderbot">
               <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Becky
+                Blenderbot
               </button>
             </Link>
           </div>
