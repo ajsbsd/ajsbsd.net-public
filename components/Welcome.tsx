@@ -17,12 +17,12 @@ export default function Welcome() {
             models.
             <br />
             <br />
-            Choose a model from to get started
+            Let&apos;s talk to Flan T5 from Google!
           </p>
           <div className="flex justify-center">
             <Link href="/flan">
               <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
-                Flan T5
+                Chat
               </button>
             </Link>
 
