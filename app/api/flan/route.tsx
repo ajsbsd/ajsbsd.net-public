@@ -46,12 +46,15 @@ export async function POST(req: NextRequest) {
     }
   );
 
+  let ai_response = "";
   const hf_result = await hf_response.json();
-
+  if (hf_response) {
+    ai_response = hf_result[0].generated_text;
+  }
   return NextResponse.json({
     text: "Added!",
     data: data,
     hf_send: data.data,
-    hf_result: hf_result[0].generated_text,
+    hf_result: ai_response,
   });
 }
