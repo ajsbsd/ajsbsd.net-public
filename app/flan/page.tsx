@@ -1,9 +1,8 @@
 "use client";
-import AHeader from "@/components/AHeader";
-import AFooter from "@/components/AFooter";
-// change intro per model
+
 import FlanT5 from "@/components/FlanT5";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 type Message = {
   id: number;
@@ -29,20 +28,13 @@ const MODEL_PERSONA = "Flan";
 export default function Flan() {
   const [isFirstLoad, toggleIsFirstLoad] = useState(true);
   const [input, setInput] = useState("");
-
   const [promptHistory, setPromptHistory] = useState<Message[]>([]);
   const [AlertMsg, setAlertMsg] = useState("");
-  //const bottomRef = useRef<HTMLDivElement>(null);
-  /*
+  const bottomRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [promptHistory]);
-
-  */
-
-  /*
-  <div ref={bottomRef}> </div>
-  */
 
   async function handleSubmit(e: any) {
     e.preventDefault();
@@ -109,63 +101,69 @@ export default function Flan() {
   }
 
   return (
-    <div>
-      <AHeader />
-      {isFirstLoad ? (
-        <FlanT5 />
-      ) : (
-        <p className="text-blue-500">
-          💬 Hello, I am {MODEL_PERSONA}. <hr />
-        </p>
-      )}
-      {promptHistory?.map((k) => (
-        <div key={k.id} className="grid grid-cols-7 gap-3">
-          <div className="col-span-1">
-            <p className="text-gray-600 text-right">👤</p>
-          </div>
-          <div className="col-span-6">
-            <p className=" text-gray-600">{k.message}</p>
-          </div>
-          <div className="col-span-1">
-            <p className=" text-blue-500 text-right">AI 💬</p>
-          </div>
-          <div className="col-span-6 bg-slate-700 rounded mr-6">
-            <p className=" text-blue-500 ml-2 mt-2 mb-2">{k.response}</p>
-          </div>
-          <hr className="col-span-7 border-red-1" />
+    <div className="fullscreen">
+      <div className="h-full">
+        <div className="h-4/6 border-2 mt-2 mr-2 ml-2 bg-slate-900 border-slate-800 over overflow-y-auto">
+          {isFirstLoad ? (
+            <FlanT5 />
+          ) : (
+            <p className="text-blue-500">
+              💬 Hello, I am {MODEL_PERSONA}.{" "}
+              <hr className="col-span-7  border-slate-800" />
+            </p>
+          )}
+          {promptHistory?.map((k) => (
+            <div key={k.id} className="grid grid-cols-7 gap-3">
+              <div className="col-span-1">
+                <p className="text-gray-600 text-right">👤</p>
+              </div>
+              <div className="col-span-6">
+                <p className=" text-gray-600">{k.message}</p>
+              </div>
+              <div className="col-span-1">
+                <p className=" text-blue-500 text-right">AI 💬</p>
+              </div>
+              <div className="col-span-6 bg-slate-700 rounded mr-6">
+                <p className=" text-blue-500 ml-2 mt-2 mb-2">{k.response}</p>
+              </div>
+              <hr className="col-span-7 border-slate-800" />
+            </div>
+          ))}
+          <div ref={bottomRef}> </div>
         </div>
-      ))}
+        <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
+          <input
+            className="border-slate-500 border-2 rounded bg-slate-800 "
+            size={150}
+            value={input}
+            onChange={handleInputChange}
+            placeholder="Welcome to AI, ask away!"
+          />
 
-      <br />
-      <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
-        <input
-          className="border-slate-500 border-2 rounded bg-slate-800 "
-          size={100}
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Welcome to AI, ask away!"
-        />
-        <br />
-
-        <button
-          className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
-          onClick={handleButton}
-          color="tomato"
-          type="submit"
-        >
-          Speak to AI
-        </button>
-        <p className="text-lg">{AlertMsg}</p>
-      </form>
-      <div className="columns-3 text-xs m-2">
-        {FLAN_PROMPTS.map((f) => (
-          <div className="mb-2" key={f} onClick={handlePromptChange}>
-            {f}
-          </div>
-        ))}
+          <button
+            className="ml-5 mt-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
+            onClick={handleButton}
+            type="submit"
+          >
+            Speak to AI
+          </button>
+          <p className="text-lg text-center text-rose-500">{AlertMsg}</p>
+        </form>
+        <div className="columns-3 text-xs m-2h ">
+          {FLAN_PROMPTS.map((f) => (
+            <div
+              className="mb-2 hover:text-rose-500"
+              key={f}
+              onClick={handlePromptChange}
+            >
+              {f}
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-center mt-5">
+          (c) 2004-2009 <Link href="https://ajsbsd.net">ajsbsd.net</Link>
+        </p>
       </div>
-
-      <AFooter />
     </div>
   );
 }
