@@ -32,6 +32,17 @@ export default function Flan() {
 
   const [promptHistory, setPromptHistory] = useState<Message[]>([]);
   const [AlertMsg, setAlertMsg] = useState("");
+  //const bottomRef = useRef<HTMLDivElement>(null);
+  /*
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [promptHistory]);
+
+  */
+
+  /*
+  <div ref={bottomRef}> </div>
+  */
 
   async function handleSubmit(e: any) {
     e.preventDefault();
@@ -105,17 +116,20 @@ export default function Flan() {
         </p>
       )}
       {promptHistory?.map((k) => (
-        <div key={k.id}>
-          <div className="flex flex-row" key={k.id}>
-            <p className="text-gray-600">👤</p>
-
-            <p className=" text-gray-600 ml-5">{k.message}</p>
+        <div key={k.id} className="grid grid-cols-7 gap-3">
+          <div className="col-span-1">
+            <p className="text-gray-600 text-right">👤</p>
           </div>
-          <div className="flex flex-row" key={k.id}>
-            <p className=" text-blue-500">💬</p>
-            <p className=" text-blue-500 ml-5">{k.response}</p>
+          <div className="col-span-6">
+            <p className=" text-gray-600">{k.message}</p>
           </div>
-          <hr />
+          <div className="col-span-1">
+            <p className=" text-blue-500 text-right">AI 💬</p>
+          </div>
+          <div className="col-span-6 bg-slate-700 rounded mr-6">
+            <p className=" text-blue-500 ml-2 mt-2 mb-2">{k.response}</p>
+          </div>
+          <hr className="col-span-7 border-red-1" />
         </div>
       ))}
 
@@ -129,6 +143,7 @@ export default function Flan() {
           placeholder="Welcome to AI, ask away!"
         />
         <br />
+
         <button
           className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded"
           onClick={handleButton}
@@ -146,6 +161,7 @@ export default function Flan() {
           </div>
         ))}
       </div>
+
       <AFooter />
     </div>
   );
