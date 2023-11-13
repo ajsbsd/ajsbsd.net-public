@@ -46,6 +46,9 @@ export default function Flan() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
+    if (input.length < 2) {
+      return;
+    }
     setInput("");
     setAlertMsg(`Communicating with ${MODEL_PERSONA}, our AI`);
 
