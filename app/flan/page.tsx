@@ -101,16 +101,24 @@ export default function Flan() {
         <FlanT5 />
       ) : (
         <p className="text-blue-500">
-          💬 Hello, I am {MODEL_PERSONA}. <br />
+          💬 Hello, I am {MODEL_PERSONA}. <hr />
         </p>
       )}
       {promptHistory?.map((k) => (
         <div key={k.id}>
-          <p className="text-gray-600">{k.message}</p>
-          <br />
-          <p className="text-blue-500">💬 {k.response}</p>
+          <div className="flex flex-row" key={k.id}>
+            <p className="text-gray-600">👤</p>
+
+            <p className=" text-gray-600 ml-5">{k.message}</p>
+          </div>
+          <div className="flex flex-row" key={k.id}>
+            <p className=" text-blue-500">💬</p>
+            <p className=" text-blue-500 ml-5">{k.response}</p>
+          </div>
+          <hr />
         </div>
       ))}
+
       <br />
       <form className="text-slate-400 mt-1" onSubmit={handleSubmit}>
         <input
