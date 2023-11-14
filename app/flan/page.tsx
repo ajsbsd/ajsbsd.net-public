@@ -149,7 +149,7 @@ export default function Flan() {
           </button>
           <p className="text-lg text-center text-rose-500">{AlertMsg}</p>
         </form>
-        <div className="columns-3 text-xs m-2h ">
+        <div className="columns-2 text-xs">
           {FLAN_PROMPTS.map((f) => (
             <div
               className="mb-2 hover:text-rose-500"
