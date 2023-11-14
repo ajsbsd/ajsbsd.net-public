@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ajsbsd.net AI Chatbot v2",
+  title: "ajsbsd.net - Home",
   description: "Home page of Aaron S. the Upwork Consultant and AI Enthusiast",
 };
 

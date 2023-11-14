@@ -17,11 +17,15 @@ export default function AHeader() {
           <a className="mr-5 hover:text-blue-800" href="/debian">
             Debian
           </a>
-          <a className="mr-5 hover:text-blue-800" href="/drumandbass">
-            Drum & Bass
-          </a>
+
           <a className="mr-5 hover:text-blue-800" href="/openbsd">
             OpenBSD
+          </a>
+          <a
+            className="mr-5 hover:text-blue-800"
+            href="https://www.upwork.com/freelancers/~01ae72fcdf0267bdbe"
+          >
+            Resume
           </a>
         </nav>
         <Link href="/flan">

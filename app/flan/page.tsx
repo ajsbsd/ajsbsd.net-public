@@ -161,7 +161,7 @@ export default function Flan() {
           ))}
         </div>
         <p className="text-xs text-center mt-5">
-          (c) 2004-2009 <Link href="https://ajsbsd.net">ajsbsd.net</Link>
+          (c) 2004-2009 <Link href="/">ajsbsd.net</Link>
         </p>
       </div>
     </div>
