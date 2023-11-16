@@ -8,10 +8,18 @@ export default function FlanT5() {
       Currently inferring from{" "}
       <Link
         className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-        href="https://huggingface.co/google/flan-t5-large"
+        href="https://huggingface.co/ajsbsd/flan-t5-base-openbsd-faq"
       >
-        FLAN-T5 large over at HuggingFace
+        FLAN-T5 large
       </Link>
+      &nbsp;with&nbsp;
+      <Link
+        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        href="https://www.openbsd.org"
+      >
+        OpenBSD
+      </Link>{" "}
+      Faq over at HuggingFace
       <br />
       <br />
       🔥Nothing is stored or trained, refresh and the chat is gone.🔥

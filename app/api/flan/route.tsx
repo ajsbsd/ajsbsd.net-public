@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
   };
 
   const hf_response = await fetch(
-    "https://api-inference.huggingface.co/models/google/flan-t5-large",
+    "https://api-inference.huggingface.co/models/ajsbsd/flan-t5-base-openbsd-faq",
     {
       headers: { Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}` },
       method: "POST",
