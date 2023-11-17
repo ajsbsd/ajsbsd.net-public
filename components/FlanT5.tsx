@@ -33,11 +33,6 @@ export default function FlanT5() {
       <br />
       <br />
       <em>Quelle ai d&apos;AI vous avez ici ajsbsd.net!</em>
-      <br />
-      <br />
-      <br />
-      <br />
-      🌟Ready to get started? Type your first message!
     </div>
   );
 }

@@ -136,7 +136,7 @@ export default function Flan() {
           size={150}
           value={input}
           onChange={handleInputChange}
-          placeholder="Welcome to AI, ask away!"
+          placeholder="🌟Ready to get started? Type your first message!"
         />
 
         <button
