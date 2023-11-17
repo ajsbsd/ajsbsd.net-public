@@ -35,28 +35,6 @@ export default function FlanT5() {
       <em>Quelle ai d&apos;AI vous avez ici ajsbsd.net!</em>
       <br />
       <br />
-      Summarize: Finetuning language models on a collection of datasets phrased
-      as instructions has been shown to improve model performance and
-      generalization to unseen tasks. In this paper we explore instruction
-      finetuning with a particular focus on (1) scaling the number of tasks, (2)
-      scaling the model size, and (3) finetuning on chain-of-thought data.
-      <br />
-      <br />
-      <em>
-        We explore instruction finetuning for pretrained language models with a
-        particular focus on scaling the number of tasks, scaling the model size,
-        and scaling the chain-of-thought data.
-      </em>
-      <br />
-      <br />
-      <a
-        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-        href="https://arxiv.org/abs/2210.11416"
-      >
-        About Scaling Instruction-Finetuned Language Models
-      </a>
-      <br />
-      Modek Copyright: Creative Commons Attribution 4.0 International
       <br />
       <br />
       🌟Ready to get started? Type your first message!
