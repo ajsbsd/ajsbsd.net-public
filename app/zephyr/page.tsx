@@ -1,6 +1,6 @@
 "use client";
 
-import FlanT5 from "@/components/FlanT5";
+import ZephyrIntro from "@/components/ZephyrIntro";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
@@ -11,21 +11,15 @@ type Message = {
 };
 
 const FLAN_PROMPTS: string[] = [
-  "Translate to German: Large language models are great.",
-  "Please answer to the following question. Who is going to be the next Heisman Trophy winner?",
-  "Q: Can Taylor Swift have a conversation with George Mason? Give the rationale before answering.",
-  "Please answer the following question. What is the boiling point of Amonia?",
-  "Answer the following yes/no question. Can you write a whole Haiku on Threads?",
-  "Q: ( False or not False or False ) is? A: Let's think step by step",
-  "The square root of x is the cube root of y. What is y to the power of 2, if x = 4?",
-  "Premise: At my age you will probably have learnt one lesson. Hypothesis: It's not certain how many lessons you'll learn by your thirties.Does the premise entail the hypothesis?",
+  "Know any recopies for dinner tonight?",
+  "How I drive from Orlando to Atlanta?",
 ];
 
 let count = 0;
 
-const MODEL_PERSONA = "Flan";
+const MODEL_PERSONA = "Zephyr";
 
-export default function Flan() {
+export default function Zephyr() {
   const [isFirstLoad, toggleIsFirstLoad] = useState(true);
   const [input, setInput] = useState("");
   const [promptHistory, setPromptHistory] = useState<Message[]>([]);
@@ -103,9 +97,9 @@ export default function Flan() {
 
   return (
     <div className="fullscreen">
-      <div className="h-80 border-2 mt-2 mr-2 ml-2 bg-slate-900 border-slate-800 over overflow-y-auto">
+      <div className="h-96 border-2 mt-2 mr-2 ml-2 bg-slate-900 border-slate-800 over overflow-y-auto">
         {isFirstLoad ? (
-          <FlanT5 />
+          <ZephyrIntro />
         ) : (
           <p className="text-blue-500">
             💬 Hello, I am {MODEL_PERSONA}.{" "}

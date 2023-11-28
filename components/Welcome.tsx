@@ -17,10 +17,10 @@ export default function Welcome() {
             models.
             <br />
             <br />
-            Let&apos;s talk to Flan T5 from Google!
+            Let&apos;s talk to Zephyr 7B from HuggingFace!
           </p>
           <div className="flex justify-center">
-            <Link href="/flan">
+            <Link href="/zephyr">
               <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
                 Chat
               </button>

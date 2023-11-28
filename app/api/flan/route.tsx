@@ -29,32 +29,46 @@ export async function POST(req: NextRequest) {
     },
   };
   */
-
+  /*
   const hf_send = {
     inputs: data.data,
     parameters: {
       max_length: 256,
     },
   };
+  */
 
+  const hf_send = {
+    inputs: data.data,
+  };
+
+  console.log(hf_send);
+
+  // https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta
+  // https://api-inference.huggingface.co/models/ajsbsd/flan-t5-base-openbsd-faq
   const hf_response = await fetch(
-    "https://api-inference.huggingface.co/models/ajsbsd/flan-t5-base-openbsd-faq",
+    "https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta",
     {
-      headers: { Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}` },
+      headers: {
+        Authorization: `Bearer ${process.env.HUGGINGFACE_API_KEY}`,
+        "Content-Type": "application/json",
+      },
       method: "POST",
       body: JSON.stringify(hf_send),
     }
   );
 
-  let ai_response = "";
-  const hf_result = await hf_response.json();
-  if (hf_response) {
-    ai_response = hf_result[0].generated_text;
-  }
+  const result = await hf_response.json();
+  //const textme: String = result[0].generated_text;
+  console.log(result);
+  let textme = result[0].generated_text;
+  //textme = textme.replace(/\n/g, "<br />");
+  //textme.replace(/\n/g, "<br />");
+  console.log(textme);
   return NextResponse.json({
     text: "Added!",
     data: data,
     hf_send: data.data,
-    hf_result: ai_response,
+    hf_result: textme,
   });
 }
