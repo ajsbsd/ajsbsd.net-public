@@ -97,7 +97,7 @@ export default function Zephyr() {
 
   return (
     <div className="fullscreen">
-      <div className="h-96 border-2 mt-2 mr-2 ml-2 bg-slate-900 border-slate-800 over overflow-y-auto">
+      <div className="h-4/6 border-2 mt-2 mr-2 ml-2 bg-slate-900 border-slate-800 over overflow-y-auto">
         {isFirstLoad ? (
           <ZephyrIntro />
         ) : (

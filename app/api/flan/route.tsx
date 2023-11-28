@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify(hf_send),
     }
   );
-
+  console.log(hf_response);
   const result = await hf_response.json();
   //const textme: String = result[0].generated_text;
   console.log(result);
