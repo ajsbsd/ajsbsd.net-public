@@ -20,13 +20,14 @@ Learn how to make UI look tolerable without Radix-UI Theme
 
 Experiment with HF Inference since my Server won't run OpenLLM/BentoML very well :)
 
-## Notes
-
-Container class in either TW or Ripple was maxing at 1024px, changed header and footer's from container to div.
-
 ## Docker
 
 11.28.2023 - Dockerfile which is live at <a href="https://ajsbsd.net">ajsbsd.net</a>
+
+```
+$ docker build -t ajsbsd.net-nextjs-docker .
+$ docker run -p 127.0.0.1:3000:3000 ajsbsd.net-nextjs-docker
+```
 
 ## Zephyr
 
