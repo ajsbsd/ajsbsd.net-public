@@ -1,8 +1,16 @@
 ## 11.01.2023 - ajsbsd.net website with Hugging Face Chat inference
 
-<a href="https://ajsbsd.net">Live Site</a>
+<a href="https://ajsbsd.net">Live at ajsbsd.net</a>
 
-<a href="https://nextjs.org">NextJS</a> <a href="https://tailwindcss.com/docs/customizing-colors">TailwindCSS</a>
+## Tools
+
+<a href="https://debian.org">Debian/bookworm</a>
+
+<a href="https://httpd.apache.org">Apache</a>
+
+<a href="https://nextjs.org">NextJS 14.0.1 now running in Docker</a>
+
+<a href="https://tailwindcss.com/docs/customizing-colors">TailwindCSS</a>
 
 ## Goals
 
