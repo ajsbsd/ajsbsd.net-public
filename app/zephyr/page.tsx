@@ -39,7 +39,7 @@ export default function Zephyr() {
     setAlertMsg(`Communicating with ${MODEL_PERSONA}, our AI`);
 
     // add to .env.local, make new api route
-    const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL_FLAN!;
+    const url = process.env.NEXT_PUBLIC_AJSBSD_API_URL!;
     const secret = process.env.NEXT_PUBLIC_AJSBSD_API_KEY!;
     const furl = url + "/?secret=" + secret;
 
