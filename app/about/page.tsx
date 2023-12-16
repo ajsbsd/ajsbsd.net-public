@@ -4,62 +4,41 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="bg-gray-900 text-gray-400  ">
+    <div>
       <AHeader />
-      <div className="pt-3 pb-3 pl-3">
-        <video
-          className="float-right ml-3 mb-3"
-          width="480"
-          height="360"
-          controls
-        >
-          <source src="/ajsbsd.net-about-november.mp4" type="video/mp4" />
-        </video>
-
-        <div>
-          <Link
-            className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-            href="https://ajsbsd.net"
-          >
-            ajsbsd.net
-          </Link>{" "}
-          has an AI Chatbot and also provides an overview of Aaron&apos;s
-          professional experience, skills, and a positive recommendation.
-          <br />
-          <br />
-          It highlights his expertise in Linux/Unix, cloud engineering, and
-          system administration.
-          <br />
-          <br />
-          <b>Linux/Unix DevOps Cloud Engineer</b>
-          <br />
-          <br />
-          Independent Contractor April 2009 - Current
-          <br />
-          <br />
-          • Provide Linux and application support for a variety of clients
-          around the world.
-          <br />
-          <br />
-          • Develop a custom SugarCRM, Xero Accounting, Concrete5 web store
-          using PHP and MySQL.
-          <br />
-          <br />
-          • Daily maintenance and security auditing of around 30 machines.
-          <br />
-          <br />
-          • Build complex cloud based scalable solutions on Amazon EC2.
-          <br />
-          <br />
-          • Scripting and automation of Linux based administration tasks using
-          Perl and Bash.
-          <br />
-          <br />
-          • Migration of web-servers from physical to cloud based solutions.
-          <br />
-          <br />• Provide end level support for certain clients.
+      <section className="text-gray-600 body-font">
+        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-200">
+              About
+              <br />
+              <p className="hidden lg:inline-block">ajsbsd.net</p>
+            </h1>
+            <p className="mb-8 leading-relaxed text-gray-400">
+              ajsbsd.net has an AI Chatbot and also provides an overview of
+              Aaron&apos;s professional experience, skills, and a positive
+              recommendation.
+            </p>
+            <div className="flex justify-center">
+              <Link href="mailto:aaron@ajsbsd.net">
+                <button className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">
+                  Contact
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <video
+              className="float-right pr-2"
+              width="480"
+              height="480"
+              controls
+            >
+              <source src="/ajsbsd.net-about-november.mp4" type="video/mp4" />
+            </video>
+          </div>
         </div>
-      </div>
+      </section>
       <AFooter />
     </div>
   );
